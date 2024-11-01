@@ -1,4 +1,4 @@
-# Application for programming Test for Toyota
+# Application for programming Test for Toyota [1 hr duration -> Finished in 1.5 hrs]
 This is a sample application which enables to understand how to integrate Kotlin, Coroutines, flow, Koin DI and write unitest for MVVM architecture.
 
 ## How It's Made:
