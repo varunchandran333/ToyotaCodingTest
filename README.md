@@ -3,7 +3,7 @@ This is a sample application which enables to understand how to integrate Kotlin
 
 ## How It's Made:
 
-**Tech used:** Android Studio, Kotlin, MVVM with Clean Architecture, Koin, Coroutines, Flow, Compose, Coil, Unit Test for flow using Turbine, Retrofit, Okhttp, Gson parser.
+**Tech used:** Android Studio, Kotlin, MVVM with Clean Architecture, Koin, Coroutines, Flow, Jetpack Compose, Coil, Unit Test for flow using Turbine, Retrofit, Okhttp, Gson parser.
 
 You can simply load the code using the git url updated all the latest version as of now, use java 17 in android studio.
 
