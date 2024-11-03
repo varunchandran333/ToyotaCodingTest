@@ -6,7 +6,7 @@ import com.training.livecodingtest.utils.NetworkResult
 import com.training.livecodingtest.utils.handleApi
 import kotlinx.coroutines.flow.Flow
 
-class UserRepository(val apiService: ApiService) : Repository {
+class UserRepository(private val apiService: ApiService) : Repository {
     override fun getUsers(): Flow<NetworkResult<List<UserListItem>>> = handleApi {
         apiService.getUsers()
     }

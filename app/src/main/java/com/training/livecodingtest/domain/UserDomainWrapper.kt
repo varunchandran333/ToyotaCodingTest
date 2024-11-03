@@ -8,6 +8,6 @@ import kotlinx.coroutines.flow.Flow
 class UserDomainWrapper(
     private val getUserDataUseCase: GetUserDataUseCase
 ) {
-    fun fetchUser(): Flow<NetworkResult<List<UserUIModel>>> =
+    operator fun invoke(): Flow<NetworkResult<List<UserUIModel>>> =
         UserMapper.convertUserListFlowToUiList(getUserDataUseCase())
 }

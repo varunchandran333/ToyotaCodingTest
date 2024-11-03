@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 
 class UserViewModel(userDomainWrapper: UserDomainWrapper) : ViewModel() {
-    val userData = userDomainWrapper.fetchUser().stateIn(
+    val userData = userDomainWrapper().stateIn(
         viewModelScope,
         SharingStarted.WhileSubscribed(5000),
         NetworkResult.Loading
