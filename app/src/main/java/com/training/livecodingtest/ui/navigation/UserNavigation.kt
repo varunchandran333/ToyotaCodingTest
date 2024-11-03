@@ -7,7 +7,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.google.gson.Gson
-import com.training.livecodingtest.data.model.UserListItem
 import com.training.livecodingtest.data.model.UserUIModel
 import com.training.livecodingtest.ui.screens.DetailScreen
 import com.training.livecodingtest.ui.screens.MainScreen

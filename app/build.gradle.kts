@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21"
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
@@ -14,6 +14,7 @@ android {
     defaultConfig {
         applicationId = "com.training.livecodingtest"
         minSdk = 29
+        //noinspection OldTargetApi,EditedTargetSdkVersion
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -109,7 +110,7 @@ dependencies {
     testImplementation(libs.mockk)
     implementation(libs.koin.androidx.compose) // Replace <version> with the latest version
     implementation(libs.androidx.hilt.navigation.compose)
-    implementation (libs.androidx.material.icons.extended)
+    implementation(libs.androidx.material.icons.extended)
     implementation(libs.logging.interceptor)
 }
 kapt {

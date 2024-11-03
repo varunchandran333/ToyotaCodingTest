@@ -36,7 +36,7 @@ class UserViewModelTest {
             val sampleData = UserUIModel(1, "Sachin", "", "", "")
             val listOfUsers = listOf(sampleData)
             val mockResponse = NetworkResult.Success(listOfUsers)
-            coEvery { useCase.fetchUser() } returns flow {
+            coEvery { useCase() } returns flow {
                 emit(NetworkResult.Loading)
                 emit(mockResponse)
             }
