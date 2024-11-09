@@ -1,4 +1,4 @@
-package com.training.livecodingtest.ui.widgets
+package com.training.livecodingtest.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -18,12 +18,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.training.livecodingtest.data.model.UserUIModel
+import com.training.livecodingtest.domain.UserUIModel
 
 @Composable
 fun User(
     userListItem: UserUIModel,
-    onSelected: (Int) -> Unit = {}
+    onSelected: (UserUIModel) -> Unit = {}
 ) {
     Row(
         modifier = Modifier
@@ -33,7 +33,7 @@ fun User(
             .background(color = Color.LightGray, shape = RoundedCornerShape(16.dp))
             .padding(8.dp)
             .clickable {
-                onSelected(userListItem.id)
+                onSelected(userListItem)
             },
         horizontalArrangement = Arrangement.SpaceBetween
     ) {

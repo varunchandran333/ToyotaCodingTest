@@ -1,4 +1,4 @@
-package com.training.livecodingtest.data.repository
+package com.training.livecodingtest.domain
 
 import com.training.livecodingtest.data.model.UserListItem
 import com.training.livecodingtest.utils.NetworkResult

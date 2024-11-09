@@ -1,8 +1,8 @@
 package com.training.livecodingtest.utils
 
-import com.training.livecodingtest.data.model.UserDomainModel
+import com.training.livecodingtest.domain.UserDomainModel
 import com.training.livecodingtest.data.model.UserListItem
-import com.training.livecodingtest.data.model.UserUIModel
+import com.training.livecodingtest.domain.UserUIModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

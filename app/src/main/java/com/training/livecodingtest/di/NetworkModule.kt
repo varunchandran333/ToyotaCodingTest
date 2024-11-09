@@ -9,8 +9,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-val interceptor = HttpLoggingInterceptor().apply {
-    this.level = HttpLoggingInterceptor.Level.BODY
+val interceptor by lazy {
+    HttpLoggingInterceptor().apply {
+        this.level = HttpLoggingInterceptor.Level.BODY
+    }
 }
 
 fun provideHttpClient() = OkHttpClient.Builder()

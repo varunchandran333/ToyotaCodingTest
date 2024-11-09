@@ -12,16 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.navigation.NavController
-import com.google.gson.Gson
-import com.training.livecodingtest.data.model.UserUIModel
-import com.training.livecodingtest.ui.navigation.Screens
+import com.training.livecodingtest.domain.UserUIModel
 import com.training.livecodingtest.ui.viewmodel.UserViewModel
-import com.training.livecodingtest.ui.widgets.User
+import com.training.livecodingtest.ui.components.User
 import com.training.livecodingtest.utils.NetworkResult
 
 @Composable
-fun MainScreen(navController: NavController, viewModel: UserViewModel) {
+fun MainScreen(viewModel: UserViewModel, onItemClick: (UserUIModel) -> Unit) {
     val receivedData = viewModel.userData.collectAsStateWithLifecycle()
     val context = LocalContext.current
     when (val userData = receivedData.value) {
@@ -40,20 +37,19 @@ fun MainScreen(navController: NavController, viewModel: UserViewModel) {
         }
 
         is NetworkResult.Success -> {
-            ShowList(navController, userData.data)
+            ShowList(userData.data) { id ->
+                onItemClick(id)
+            }
         }
     }
 }
 
 @Composable
-fun ShowList(navController: NavController, userList: List<UserUIModel>) {
+fun ShowList(userList: List<UserUIModel>, onItemClick: (UserUIModel) -> Unit) {
     LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(userList) { item ->
-            User(item) { userId ->
-                val route = Screens.DetailScreen.name
-                val selectedUser = userList.first { user -> user.id == userId }
-                val jsonString = Gson().toJson(selectedUser)
-                navController.navigate("$route?user=${jsonString}")
+        items(items = userList, key = { item -> item.id }) { item ->
+            User(item) { user ->
+                onItemClick(user)
             }
         }
     }

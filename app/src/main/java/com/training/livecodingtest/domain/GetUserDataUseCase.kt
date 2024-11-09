@@ -1,7 +1,5 @@
 package com.training.livecodingtest.domain
 
-import com.training.livecodingtest.data.model.UserDomainModel
-import com.training.livecodingtest.data.repository.Repository
 import com.training.livecodingtest.utils.NetworkResult
 import com.training.livecodingtest.utils.UserMapper
 import kotlinx.coroutines.flow.Flow

@@ -5,6 +5,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
+    id ("kotlinx-serialization")
 }
 
 android {
@@ -112,6 +113,7 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.logging.interceptor)
+    implementation(libs.kotlinx.serialization.json)
 }
 kapt {
     correctErrorTypes = true
