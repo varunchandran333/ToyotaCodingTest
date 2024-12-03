@@ -18,7 +18,7 @@ fun UserNavigation() {
     NavHost(navController, startDestination = Main) {
         composable<Main> {
             MainScreen(viewModel) { user ->
-                navController.navigate(Detail(user))
+                navController.navigate(Detail)
             }
         }
         composable<Detail>(typeMap = UserUIModel.typeMap) { navBack ->
