@@ -1,7 +1,5 @@
 package com.training.livecodingtest.ui.navigation
 
-import android.os.Build
-import android.os.Parcelable
 import androidx.core.bundle.Bundle
 import androidx.navigation.NavType
 import com.training.livecodingtest.domain.UserUIModel

@@ -18,11 +18,11 @@ fun UserNavigation() {
     NavHost(navController, startDestination = Main) {
         composable<Main> {
             MainScreen(viewModel) { user ->
-                navController.navigate(Detail)
+                navController.navigate(Detail(user))
             }
         }
         composable<Detail>(typeMap = UserUIModel.typeMap) { navBack ->
-            val receivedData = navBack.toRoute<UserUIModel>()
+            val receivedData = navBack.toRoute<Detail>().userUIModel
             DetailScreen(receivedData)
         }
     }

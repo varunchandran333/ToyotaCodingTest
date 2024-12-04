@@ -1,7 +1,5 @@
 package com.training.livecodingtest.domain
 
-import androidx.lifecycle.SavedStateHandle
-import androidx.navigation.toRoute
 import com.training.livecodingtest.ui.navigation.serializableType
 import kotlinx.serialization.Serializable
 import kotlin.reflect.typeOf
@@ -10,14 +8,12 @@ import kotlin.reflect.typeOf
 data class UserUIModel(
     val id: Int,
     val displayName: String,
+    @Serializable(with = UrlEncodedStringSerializer::class)
     val avatarUrl: String,
     val firstAppearance: String,
     val voiceInfo: String
 ) {
     companion object {
         val typeMap = mapOf(typeOf<UserUIModel>() to serializableType<UserUIModel>())
-
-        fun from(savedStateHandle: SavedStateHandle) =
-            savedStateHandle.toRoute<UserUIModel>(typeMap)
     }
 }
