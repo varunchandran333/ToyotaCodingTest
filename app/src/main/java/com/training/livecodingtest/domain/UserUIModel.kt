@@ -1,19 +1,17 @@
 package com.training.livecodingtest.domain
 
-import com.training.livecodingtest.ui.navigation.serializableType
+import android.os.Parcelable
+import eu.anifantakis.navhelper.serialization.StringSanitizer
+import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
-import kotlin.reflect.typeOf
 
 @Serializable
+@Parcelize
 data class UserUIModel(
     val id: Int,
     val displayName: String,
-    @Serializable(with = UrlEncodedStringSerializer::class)
+    @Serializable(with = StringSanitizer::class)
     val avatarUrl: String,
     val firstAppearance: String,
     val voiceInfo: String
-) {
-    companion object {
-        val typeMap = mapOf(typeOf<UserUIModel>() to serializableType<UserUIModel>())
-    }
-}
+) : Parcelable

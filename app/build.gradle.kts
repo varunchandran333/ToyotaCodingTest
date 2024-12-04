@@ -5,18 +5,18 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
-    id ("kotlinx-serialization")
+    id("kotlinx-serialization")
 }
 
 android {
     namespace = "com.training.livecodingtest"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.training.livecodingtest"
         minSdk = 29
         //noinspection OldTargetApi,EditedTargetSdkVersion
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -114,6 +114,7 @@ dependencies {
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.logging.interceptor)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.navtypeparcelablehelperlibrary)
 }
 kapt {
     correctErrorTypes = true
