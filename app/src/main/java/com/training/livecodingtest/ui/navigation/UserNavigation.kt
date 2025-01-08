@@ -7,7 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.training.livecodingtest.domain.UserUIModel
+import com.training.livecodingtest.domain.model.UserUIModel
 import com.training.livecodingtest.ui.screens.DetailScreen
 import com.training.livecodingtest.ui.screens.MainScreen
 import com.training.livecodingtest.ui.viewmodel.UserViewModel

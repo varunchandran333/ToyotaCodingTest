@@ -1,4 +1,4 @@
-package com.training.livecodingtest.di
+package com.training.livecodingtest.data.di
 
 import com.training.livecodingtest.ui.viewmodel.UserViewModel
 import org.koin.core.module.dsl.viewModel

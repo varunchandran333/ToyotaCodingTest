@@ -2,10 +2,10 @@ package com.training.livecodingtest.utils
 
 import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.text.intl.Locale
-import com.training.livecodingtest.domain.UserDomainModel
+import com.training.livecodingtest.domain.model.UserDomainModel
 import com.training.livecodingtest.data.model.UserListItem
 import com.training.livecodingtest.data.newModel.Users
-import com.training.livecodingtest.domain.UserUIModel
+import com.training.livecodingtest.domain.model.UserUIModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

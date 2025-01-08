@@ -1,6 +1,6 @@
 package com.training.livecodingtest.ui.navigation
 
-import com.training.livecodingtest.domain.UserUIModel
+import com.training.livecodingtest.domain.model.UserUIModel
 import kotlinx.serialization.Serializable
 
 

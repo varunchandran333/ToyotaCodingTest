@@ -1,4 +1,4 @@
-package com.training.livecodingtest.di
+package com.training.livecodingtest.data.di
 
 import com.training.livecodingtest.data.service.ApiService
 import com.training.livecodingtest.utils.Constants.BASE_URL

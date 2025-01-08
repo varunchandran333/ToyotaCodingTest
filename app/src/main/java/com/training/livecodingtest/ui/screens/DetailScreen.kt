@@ -1,7 +1,7 @@
 package com.training.livecodingtest.ui.screens
 
 import androidx.compose.runtime.Composable
-import com.training.livecodingtest.domain.UserUIModel
+import com.training.livecodingtest.domain.model.UserUIModel
 import com.training.livecodingtest.ui.components.UserDetails
 
 @Composable

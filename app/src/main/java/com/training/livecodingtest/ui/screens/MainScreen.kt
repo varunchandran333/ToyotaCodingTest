@@ -12,7 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.training.livecodingtest.domain.UserUIModel
+import com.training.livecodingtest.domain.model.UserUIModel
 import com.training.livecodingtest.ui.viewmodel.UserViewModel
 import com.training.livecodingtest.ui.components.User
 import com.training.livecodingtest.utils.NetworkResult

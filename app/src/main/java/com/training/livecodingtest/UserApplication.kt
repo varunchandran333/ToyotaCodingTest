@@ -1,9 +1,9 @@
 package com.training.livecodingtest
 
 import android.app.Application
-import com.training.livecodingtest.di.networkModules
-import com.training.livecodingtest.di.repositoryModule
-import com.training.livecodingtest.di.viewModelModule
+import com.training.livecodingtest.data.di.networkModules
+import com.training.livecodingtest.data.di.repositoryModule
+import com.training.livecodingtest.data.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

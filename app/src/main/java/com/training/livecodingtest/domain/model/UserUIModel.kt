@@ -1,4 +1,4 @@
-package com.training.livecodingtest.domain
+package com.training.livecodingtest.domain.model
 
 import android.os.Parcelable
 import eu.anifantakis.navhelper.serialization.StringSanitizer

@@ -1,8 +1,8 @@
 package com.training.livecodingtest
 
 import app.cash.turbine.test
-import com.training.livecodingtest.domain.UserUIModel
-import com.training.livecodingtest.domain.UserDomainWrapper
+import com.training.livecodingtest.domain.model.UserUIModel
+import com.training.livecodingtest.domain.wrapper.UserDomainWrapper
 import com.training.livecodingtest.ui.viewmodel.UserViewModel
 import com.training.livecodingtest.utils.NetworkResult
 import io.mockk.coEvery

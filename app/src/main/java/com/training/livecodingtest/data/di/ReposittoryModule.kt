@@ -1,9 +1,9 @@
-package com.training.livecodingtest.di
+package com.training.livecodingtest.data.di
 
-import com.training.livecodingtest.domain.Repository
+import com.training.livecodingtest.domain.usecase.Repository
 import com.training.livecodingtest.data.repository.UserRepository
-import com.training.livecodingtest.domain.GetUserDataUseCase
-import com.training.livecodingtest.domain.UserDomainWrapper
+import com.training.livecodingtest.domain.usecase.GetUserDataUseCase
+import com.training.livecodingtest.domain.wrapper.UserDomainWrapper
 import org.koin.dsl.module
 
 val repositoryModule = module {

@@ -1,4 +1,4 @@
-package com.training.livecodingtest.domain
+package com.training.livecodingtest.domain.model
 
 data class UserDomainModel(
     val id: Int,
